@@ -1,0 +1,1 @@
+# Thermogram-Conversion-Pipeline-Rainbow-High-Contrast-to-White-Hot-
