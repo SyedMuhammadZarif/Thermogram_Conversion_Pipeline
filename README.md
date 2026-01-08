@@ -54,7 +54,10 @@ pip install numpy opencv-python pillow tqdm
   <li><strong>Load Image:</strong> OpenCV reads BGR thermal images.</li>
   <li><strong>Black Pixel Mask:</strong> Detect and preserve near-black/background pixels.</li>
   <li><strong>HSV Conversion:</strong> Convert BGR → HSV and extract hue channel.</li>
+  <li><strong>HSV Shifting:</strong> Shift degree of color space to align with thermography standards .</li>
+  <img src="https://github.com/SyedMuhammadZarif/Thermogram-Conversion-Pipeline-Rainbow-High-Contrast-to-White-Hot-/blob/69b74a7c457cbe3cafb3c0f284a6873df2d660bd/colorwheel.png" width="300">
   <li><strong>Hue → White-Hot Mapping:</strong> Apply Gaussian-based mapping to convert color-coded thermal values to intensity values (white = hottest, black = coldest).</li>
+  <img src="https://github.com/SyedMuhammadZarif/Thermogram-Conversion-Pipeline-Rainbow-High-Contrast-to-White-Hot-/blob/69b74a7c457cbe3cafb3c0f284a6873df2d660bd/conversion%20black.png" width="300">
   <li><strong>Post-Processing:</strong> Restore black pixels, optionally blur for smooth gradients.</li>
   <li><strong>Save Output:</strong> Preserve filenames and directory hierarchy.</li>
 </ol>
