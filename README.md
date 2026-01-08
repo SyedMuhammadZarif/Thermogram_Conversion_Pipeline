@@ -1,1 +1,108 @@
-# Thermogram-Conversion-Pipeline-Rainbow-High-Contrast-to-White-Hot-
+
+<h1>Thermal Colormap Conversion Pipeline</h1>
+
+<p>
+This Python script converts high-contrast thermal images with rainbow colormaps into
+<em>white-hot thermograms</em>. Black/background regions are preserved, and output images
+maintain the same directory structure as the input.
+</p>
+
+<hr>
+
+<h2>Features</h2>
+<ul>
+  <li>Converts rainbow or false-color thermal images to white-hot grayscale</li>
+  <li>Preserves black/background pixels</li>
+  <li>Optional Gaussian blur for smoother output</li>
+  <li>Recursive batch processing with folder structure preservation</li>
+  <li>Progress tracking via <code>tqdm</code></li>
+</ul>
+
+<hr>
+
+<h2>Directory Structure</h2>
+
+<pre>
+STEP 1 Data Processing/
+│
+├── IEEE/
+│   ├── IEE_RESIZED/        Input thermal images
+│   └── IEEE_Grayscaled/    Output white-hot thermograms
+</pre>
+
+<hr>
+
+<h2>Requirements</h2>
+
+<pre>
+pip install numpy opencv-python pillow tqdm
+</pre>
+
+<ul>
+  <li>Python 3.x</li>
+  <li>NumPy</li>
+  <li>OpenCV</li>
+  <li>Pillow</li>
+  <li>tqdm</li>
+</ul>
+
+<hr>
+
+<h2>Pipeline Overview</h2>
+
+<ol>
+  <li><strong>Load Image:</strong> OpenCV reads BGR thermal images.</li>
+  <li><strong>Black Pixel Mask:</strong> Detect and preserve near-black/background pixels.</li>
+  <li><strong>HSV Conversion:</strong> Convert BGR → HSV and extract hue channel.</li>
+  <li><strong>Hue → White-Hot Mapping:</strong> Apply Gaussian-based mapping to convert color-coded thermal values to intensity values (white = hottest, black = coldest).</li>
+  <li><strong>Post-Processing:</strong> Restore black pixels, optionally blur for smooth gradients.</li>
+  <li><strong>Save Output:</strong> Preserve filenames and directory hierarchy.</li>
+</ol>
+
+<hr>
+
+<h2>Configuration</h2>
+
+<pre>
+input_folder  = "STEP 1 Data Processing\\IEEE\\IEE_RESIZED"
+output_folder = "STEP 1 Data Processing\\IEEE\\IEEE_Grayscaled"
+</pre>
+
+<hr>
+
+<h2>Supported Formats</h2>
+
+<ul>
+  <li>PNG</li>
+  <li>JPG / JPEG</li>
+  <li>BMP</li>
+  <li>TIFF</li>
+</ul>
+
+<hr>
+
+<h2>Usage</h2>
+
+<pre>
+python thermal_colormap_to_whitehot.py
+</pre>
+
+<p>
+Progress is displayed via <code>tqdm</code>. All outputs are saved to the specified folder.
+</p>
+
+<hr>
+
+<h2>Output</h2>
+<ul>
+  <li>White-hot grayscale thermograms</li>
+  <li>Preserved black/background regions</li>
+  <li>Folder structure matches input</li>
+</ul>
+
+<hr>
+
+<h2>License</h2>
+<p>
+Free for research and educational purposes. Modify for personal or lab pipelines.
+</p>
