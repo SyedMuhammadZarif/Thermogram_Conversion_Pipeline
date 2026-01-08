@@ -18,35 +18,6 @@ maintain the same directory structure as the input.
   <li>Progress tracking via <code>tqdm</code></li>
 </ul>
 
-<hr>
-
-<h2>Directory Structure</h2>
-
-<pre>
-STEP 1 Data Processing/
-│
-├── IEEE/
-│   ├── IEE_RESIZED/        Input thermal images
-│   └── IEEE_Grayscaled/    Output white-hot thermograms
-</pre>
-
-<hr>
-
-<h2>Requirements</h2>
-
-<pre>
-pip install numpy opencv-python pillow tqdm
-</pre>
-
-<ul>
-  <li>Python 3.x</li>
-  <li>NumPy</li>
-  <li>OpenCV</li>
-  <li>Pillow</li>
-  <li>tqdm</li>
-</ul>
-
-<hr>
 
 <h2>Pipeline Overview</h2>
 
