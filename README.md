@@ -38,8 +38,8 @@ maintain the same directory structure as the input.
 <h2>Configuration</h2>
 
 <pre>
-input_folder  = "STEP 1 Data Processing\\IEEE\\IEE_RESIZED"
-output_folder = "STEP 1 Data Processing\\IEEE\\IEEE_Grayscaled"
+input_folder  = "STEP 1 Data Processing\\IEEE\\IEE_RESIZED" (Replace with yours)
+output_folder = "STEP 1 Data Processing\\IEEE\\IEEE_Grayscaled" (Replace with yours)
 </pre>
 
 <hr>
